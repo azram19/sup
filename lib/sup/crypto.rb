@@ -261,7 +261,7 @@ EOS
       plain_data = nil
     else
       signed_text_data = nil
-      plain_data = GPGME::Data.empty
+      plain_data = GPGME::Data.empty!
     end
     begin
       ctx.verify(sig_data, signed_text_data, plain_data)
